@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À LA MER 語彙集</title>
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="app-header">
+      <h1>À LA MER 語彙集</h1>
+      <div class="top-controls">
+        <label class="rate-wrap">
+          <span>読み上げ速度</span>
+          <select id="rate">
+            <option value="0.5">0.5</option>
+            <option value="0.6">0.6</option>
+            <option value="0.7" selected>0.7</option>
+            <option value="0.8">0.8</option>
+            <option value="0.9">0.9</option>
+            <option value="1.0">1.0</option>
+          </select>
+        </label>
+      </div>
+      <form id="search-form" action="" method="get">
+        <div class="searchbox">
+          <input id="q" type="text" name="q" placeholder="単語で検索" autocomplete="off" />
+          <ul id="suggestions" class="suggest-list"></ul>
+        </div>
+        <button type="submit">検索</button>
+      </form>
+    </header>
+
+    <nav id="category-bar" class="category-bar" aria-label="カテゴリ"></nav>
+    <main id="results" aria-live="polite">
+      <div class="empty">読み込み中です。</div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
